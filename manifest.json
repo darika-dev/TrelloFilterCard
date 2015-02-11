@@ -1,0 +1,26 @@
+{
+   "name": "Trello filter card",
+   "version": "1.0",
+   "manifest_version": 2,
+
+  "permissions": [ "contextMenus", "tabs", "storage" , "http://*/*", "https://*/*" ],
+
+  "description": "__MSG_chrome_extension_description__",
+	"icons": {
+		"128": "images/ico/icon128.png",
+		"16": "images/ico/icon16.png",
+		"48": "images/ico/icon48.png"
+	},
+  "content_scripts": [
+    {
+      "matches": [ "https://trello.com/*/cards" ],
+
+      "js": [ "jquery.js", "heart.js" ],
+      "run_at": "document_end"
+    }
+  ]
+  // "web_accessible_resources": [
+  //   "injected.js", "background.js"
+  // ],
+   
+}
